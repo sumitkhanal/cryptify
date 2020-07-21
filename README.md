@@ -1,2 +1,2 @@
-# encrypto
-encryption using cryptography and steganography for robust data security
+# cryptify
+encryption using cryptography  for robust data security
