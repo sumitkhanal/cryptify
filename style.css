@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(background.jpg); 
+  background-size: 100%;
 }
 
 .topnav {
@@ -19,12 +21,11 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #4285f4;
 }
 
 .topnav a.active {
-  background-color:#000080;
+  background-color:#656d7e;
   color: white;
 }
 
@@ -57,20 +58,21 @@ body {
 .top h1{
   color: white;
   padding-top: 4%;
-  padding-left: 43%;
+  padding-left: 42%;
   font-size: 60px;
   font-family: "Cooper Black";
 }
 .top p{
   padding-left: 0%;
-  color: #656d7e;
+  color: #3d415f;
   font-size: 22px;
   text-align: center;
+  font-family: "Times New Roman";
 }
-.top h1 span{
+/*.top h1 span{
  background-color: #1a73e8;
 }
-
+*/
 @media screen and (max-width: 660px){
   .top h1{
     font-size: 60px;
@@ -109,11 +111,11 @@ body {
 .grid_1_of_2{ width: 49.2%; }
 .grid_2_of_2{ width: 100%;  }
 
-.col h2{ padding-left: 310px }
+.col h2{ padding-left: 305px; }
 .col p{ padding-left: 280px }
 .col img{
   padding-top: 30px;
-  padding-left: 250px;
+  padding-left: 245px;
   width: 30%;
   height: 150px;
 }
@@ -121,6 +123,12 @@ body {
   color: #4285f4;
 
 }
+
+.col a{
+  color: #3d415f;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 760px){
 .col h2{ padding-left: 200px }
 .col p{ padding-left: 170px }
@@ -137,8 +145,4 @@ body {
   [class*='grid_'] { width: 100%; }
 }
 
-.col a{
-  color: black;
-  text-decoration: none;
-}
 
