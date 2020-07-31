@@ -1,4 +1,11 @@
 <?php
+/*$localhost ='localhost';
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "csv_db"; 
+
+$conn = mysqli_connect($localhost, $dbusername, $dbpassword, $dbname);*/
+
 header('Content-Type: application/jason');
 
 $allowed =['mp4','png','jpg', 'txt', 'zip', 'pdf', 'doc', 'docx'];
@@ -14,7 +21,13 @@ foreach ($_FILES['files']['name'] as $key => $name) {
 
 		$file = uniqid('', true) . time() . '.' . $ext;	
 
-		if(in_array($ext, $allowed) && move_uploaded_file($temp, 'uploads/' . $file)){
+		if(in_array($ext, $allowed) && move_uploaded_file($temp, 'uploads/' . $file)
+
+
+/*			$sql = "INSERT into fileup(title)";*/
+
+
+	){
 			$processed[] = array(
 				'name' => $name,
 				'file' => $file,
@@ -29,3 +42,5 @@ foreach ($_FILES['files']['name'] as $key => $name) {
 	}
 }
 echo json_encode($processed);
+
+
