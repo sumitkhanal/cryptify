@@ -45,7 +45,7 @@ function myFunction() {
 					uploadedAnchor = document.createElement('a');
 					uploadedAnchor.textContent = currFile.name;
 
-					if(currFile.uploaded){
+/*					if(currFile.uploaded){
 						uploadedAnchor.href ='uploads/'+ currFile.file;
 					}
 					
@@ -55,7 +55,7 @@ function myFunction() {
 					uploadedElement.appendChild(uploadedAnchor);
 					uploadedElement.appendChild(uploadedStatus);
 
-					uploadsFinished.appendChild(uploadedElement);
+					uploadsFinished.appendChild(uploadedElement);*/
 
 				}
 				uploadsFinished.className='';
@@ -93,3 +93,4 @@ function myFunction() {
 		return false;
 	};
 }());
+

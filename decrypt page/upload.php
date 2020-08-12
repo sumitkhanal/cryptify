@@ -1,4 +1,10 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "demos";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
 header('Content-Type: application/jason');
 
 $allowed =['mp4','png','jpg', 'txt', 'zip', 'pdf', 'doc', 'docx'];
@@ -28,4 +34,9 @@ foreach ($_FILES['files']['name'] as $key => $name) {
 		}
 	}
 }
+
+$mysql_insert = "INSERT INTO uploads (file_name, upload_time)VALUES('".$file."','".date("Y-m-d H:i:s")."')";
+		
+		mysqli_query($conn, $mysql_insert) or die("database error:". mysqli_error($conn));
+		
 echo json_encode($processed);

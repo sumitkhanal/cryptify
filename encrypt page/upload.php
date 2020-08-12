@@ -1,10 +1,9 @@
 <?php
-/*$localhost ='localhost';
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "csv_db"; 
-
-$conn = mysqli_connect($localhost, $dbusername, $dbpassword, $dbname);*/
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "demos";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 header('Content-Type: application/jason');
 
@@ -24,7 +23,6 @@ foreach ($_FILES['files']['name'] as $key => $name) {
 		if(in_array($ext, $allowed) && move_uploaded_file($temp, 'uploads/' . $file)
 
 
-/*			$sql = "INSERT into fileup(title)";*/
 
 
 	){
@@ -41,6 +39,10 @@ foreach ($_FILES['files']['name'] as $key => $name) {
 		}
 	}
 }
+$mysql_insert = "INSERT INTO uploads (file_name, upload_time)VALUES('".$file."','".date("Y-m-d H:i:s")."')";
+		
+		mysqli_query($conn, $mysql_insert) or die("database error:". mysqli_error($conn));
+
 echo json_encode($processed);
 
 

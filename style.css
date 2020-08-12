@@ -58,7 +58,7 @@ body {
 .top h1{
   color: #454745;
   padding-top: 4%;
-  padding-left: 44%;
+  padding-left: 43%;
   font-size: 60px;
   font-family: "Cooper Black";
 }
@@ -112,7 +112,7 @@ body {
 .col p{ padding-left: 280px }
 .col img{
   padding-top: 30px;
-  padding-left: 245px;
+  padding-left: 240px;
   width: 30%;
   height: 150px;
 }
